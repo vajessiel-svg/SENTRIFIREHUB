@@ -1,0 +1,21 @@
+[Unit]
+Description=SentriFire MediaMTX camera gateway
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=sentrifire
+Group=sentrifire
+WorkingDirectory=/opt/sentrifire/mediamtx
+ExecStart=/opt/sentrifire/mediamtx/mediamtx /opt/sentrifire/mediamtx/mediamtx.yml
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target
+

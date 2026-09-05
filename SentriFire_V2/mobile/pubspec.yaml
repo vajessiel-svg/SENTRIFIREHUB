@@ -1,0 +1,35 @@
+name: sentrifire_mobile
+description: "SentriFire mobile fire detection and early warning application."
+publish_to: "none"
+
+version: 2.0.0+2
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  cryptography: ^2.7.0
+  firebase_core: ^4.0.0
+  firebase_messaging: ^16.0.0
+  flutter_secure_storage: ^11.0.0
+  http: ^1.0.0
+  intl: ^0.20.0
+  local_auth: ^3.0.2
+  shared_preferences: ^2.0.0
+  video_player: ^2.9.0
+  web_socket_channel: ^3.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/sentrifire_shield_transparent.png

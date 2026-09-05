@@ -1,0 +1,28 @@
+# Copy to mediamtx.yml, replace every CHANGE_ME, and set mode 600.
+logLevel: info
+rtsp: true
+rtspAddress: :8554
+rtspTransports: [tcp]
+rtmp: false
+hls: true
+hlsAddress: :8888
+hlsAlwaysRemux: true
+hlsVariant: lowLatency
+hlsAllowOrigins: ['*']
+webrtc: false
+srt: false
+api: false
+metrics: false
+playback: false
+
+paths:
+  cam1:
+    source: rtsp://CHANGE_ME_USER:CHANGE_ME_PASSWORD@192.168.1.101:554/stream2
+    sourceOnDemand: false
+  cam2:
+    source: rtsp://CHANGE_ME_USER:CHANGE_ME_PASSWORD@192.168.1.102:554/stream2
+    sourceOnDemand: false
+  cam3:
+    source: rtsp://CHANGE_ME_USER:CHANGE_ME_PASSWORD@192.168.1.103:554/stream2
+    sourceOnDemand: false
+

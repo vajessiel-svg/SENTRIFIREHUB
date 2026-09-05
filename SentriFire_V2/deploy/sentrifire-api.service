@@ -1,0 +1,25 @@
+[Unit]
+Description=SentriFire API and YOLO detector
+After=network-online.target mediamtx.service
+Wants=network-online.target
+Requires=mediamtx.service
+
+[Service]
+Type=simple
+User=sentrifire
+Group=sentrifire
+WorkingDirectory=/opt/sentrifire/backend
+EnvironmentFile=/opt/sentrifire/backend/.env
+Environment=YOLO_CONFIG_DIR=/opt/sentrifire/backend/data/ultralytics
+ExecStart=/opt/sentrifire/backend/.venv/bin/python -m app
+Restart=always
+RestartSec=5
+TimeoutStopSec=20
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+ReadWritePaths=/opt/sentrifire/backend/data
+
+[Install]
+WantedBy=multi-user.target

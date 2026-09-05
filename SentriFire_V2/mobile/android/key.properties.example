@@ -1,0 +1,5 @@
+# Copy to android/key.properties and never commit the real file.
+storePassword=CHANGE_ME
+keyPassword=CHANGE_ME
+keyAlias=sentrifire
+storeFile=../sentrifire-release.jks
